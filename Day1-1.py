@@ -9,10 +9,8 @@ def fun(n):
     else:
         dp[n] = max(n, fun(n//2) + fun(n//3) + fun(n//4))
         return dp[n]
-
-while True:
-    n=input()
-    if n=='':
-        break
-    n=int(n)
-    print(fun(n))
+i = 10
+while(i > 0):
+        n = int(input())
+        print(fun(n))
+        i -= 1
