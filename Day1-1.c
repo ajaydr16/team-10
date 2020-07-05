@@ -77,7 +77,7 @@ void insert_position()
 		newnode->next=tmp;
 		head=newnode;
 	}
-	else //traverse the list until position-1
+	else
 	{
 		while((tmp!=NULL)&&(k<pos-1))
 		{
@@ -117,13 +117,13 @@ void delete_first()
 }
 void delete_last()
 {
-	  if(head==NULL)  //If list is empty
+	  if(head==NULL)  
 	{
 		printf(" No elements are in the List \n ");
 	}
 	else
 	{	
-		if(head->next==NULL)  //If List has one node
+		if(head->next==NULL) 
 		{
 			printf(" Deleted element is %d \n",head->data);
 			free(head);
@@ -132,7 +132,7 @@ void delete_last()
 	   else
 	   {	   
 	   		struct node *tmp=head,*prev=head;
-	   		while(tmp->next!=NULL)  //If list has morethan one node
+	   		while(tmp->next!=NULL) 
 			{
 				prev=tmp;
 				tmp=tmp->next;
